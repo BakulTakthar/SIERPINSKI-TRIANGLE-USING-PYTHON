@@ -1,4 +1,5 @@
 import random as ran
+
 import matplotlib.pyplot as mpt
 
 pointA = (0,0)
@@ -6,7 +7,7 @@ pointB = (3,3)
 pointC = (0,4.242640687)
 pointALPHA = (1,2)
 
-def plotting():
+def plotting(number):
     
     mpt.scatter(0,0)
     mpt.scatter(3,0)
@@ -26,7 +27,7 @@ def plotting():
     AlphaX = 1.4
     AlphaY = 1
     
-    for i in range(0, 500):
+    for i in range(0, number):
         
         randvalue = ran.randrange(0,3)
         
@@ -37,7 +38,7 @@ def plotting():
             
             mpt.scatter(cordiX, cordiY, color = 'black', s = 1)
             
-            print(cordiX,',', cordiY)
+           # print(cordiX,',', cordiY)
             
             
         elif randvalue == 1: # point B
@@ -46,7 +47,7 @@ def plotting():
             
             mpt.scatter(cordiX, cordiY, color = 'black', s = 1) 
             
-            print(cordiX,',' ,cordiY)
+           # print(cordiX,',' ,cordiY)
             
             
         elif randvalue == 2: # point A','
@@ -56,7 +57,7 @@ def plotting():
             
             mpt.scatter(cordiX, cordiY, color = 'black', s = 1)
             
-            print(cordiX,',' ,cordiY)
+           # print(cordiX,',' ,cordiY)
             
             
         else:
@@ -65,7 +66,8 @@ def plotting():
         AlphaX = cordiX
         AlphaY = cordiY
     
+    print("the code ran")
     
     mpt.show()
     
-plotting()
+plotting(int(input("no. of plots >>>")))
